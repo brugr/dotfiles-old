@@ -1,0 +1,61 @@
+# Dotfile git
+alias df-git='git --git-dir=$HOME/dotfiles --work-tree=$HOME'
+
+
+# ZSH Stuff
+alias reload='source ~/.zshrc'
+alias edzsh='nano ~/.zshrc'
+alias edalias='nano ~/.alias'
+
+
+# Small scripts (kinda)
+### Change directory & list files 
+cl() {
+   cd $1
+   ls -la
+}
+### Make directory & enter it
+mkcd() {
+   mkdir -p $1
+   cd $1
+}
+
+
+# Git
+alias pull='git pull origin master'
+alias add='git add --all'
+alias push='git push --all'
+
+
+# Basic Stuff
+alias clr='clear'
+alias ls='ls --color=auto'
+alias ll='ls -la'
+alias l.='ls -d .* --color=auto'
+
+
+# Change how some commands work
+alias mkdir='mkdir -pv'
+alias mv='mv -i'
+alias cp='cp -i'
+alias ln='ln -i'
+alias rm='rm -I --preserve-root'
+alias chown='chown --preserve-root'
+alias chmod='chmod --preserve-root'
+alias chgrp='chgrp --preserve-root'
+alias wget='wget -c'
+
+
+# APT stuff
+alias update='sudo apt update'
+alias upgrade='sudo apt upgrade'
+
+
+# Easier CD
+alias cd..='cd ..'
+alias ..='cd ..'
+alias ...='cd ../../../'
+alias ....='cd ../../../../'
+alias .....='cd ../../../../'
+alias .4='cd ../../../../'
+alias .5='cd ../../../../../'

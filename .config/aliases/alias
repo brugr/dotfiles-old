@@ -1,9 +1,9 @@
 # Dotfile git
-alias dfg='git --git-dir=$HOME/dotfiles --work-tree=$HOME'
+alias dfg='git --git-dir=$HOME/.dotfiles --work-tree=$HOME'
 
 
 # ZSH
-alias reload='source ~/.config/zsh/zshrc'
+alias rzsh='source ~/.config/zsh/zshrc'
 alias edzsh='nano ~/.config/zsh/zshrc'
 alias edalias='nano ~/.config/aliases/alias'
 

@@ -1,0 +1,5 @@
+# Aliases for DNF
+# For Fedora
+alias update='sudo dnf update'
+alias upgrade='sudo dnf upgrade'
+alias install='sudo dnf install'

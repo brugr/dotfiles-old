@@ -1,1 +1,1 @@
-/home/kevin/.config/zsh/zshrc
+.config/zsh/zshrc

@@ -9,10 +9,10 @@ ZSH_THEME="agnoster"
 # Plugins
 # https://github.com/ohmyzsh/ohmyzsh/wiki/Plugins
 plugins=(
-  zsh-syntax-highlighting    # https://github.com/zsh-users/zsh-syntax-highlighting
-  zsh-autocomplete    # https://github.com/marlonrichert/zsh-autocomplete
   sudo    # https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/sudo
   vscode    # https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/vscode
+  zsh-autocomplete    # https://github.com/marlonrichert/zsh-autocomplete
+  zsh-syntax-highlighting    # https://github.com/zsh-users/zsh-syntax-highlighting
   )
 
 # Days between update check

@@ -4,10 +4,12 @@
 # https://github.com/brugr/dotfiles
 #
 
+alias dfg='git --git-dir=$HOME/.dotfiles --work-tree=$HOME'
+
 set -e
 clear
 
-# Check if the required tools are installed
+# Check if the required packages are installed
 if ! command -v zsh >/dev/null 2>&1
 then
     echo "zsh is not installed, now exiting."
@@ -24,26 +26,20 @@ then
     exit
 fi
 
-# Install oh-my-zsh
-echo "Installing oh-my-zsh..."
-export ZSH="$HOME/.config/oh-my-zsh"
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
+# Install antigen
+echo "Installing Antigen..."
+curl -L https://raw.githubusercontent.com/zsh-users/antigen/master/bin/antigen.zsh > $HOME/.config/zsh/antigen/antigen.zsh
 
+# Clone dotfiles
 echo "Installing dotfiles..."
+git clone --bare https://github.com/brugr/dotfiles.git $HOME/.dotfiles
 
-git clone --bare https://github.com/brugr/dotfiles.git $HOME/.dotfiles    # Clone the main repo
+# Checkout files
+mkdir -p .config-backup && \
+dfg checkout 2>&1 | egrep "\s+\." | awk {'print $1'} | \
+xargs -I{} mv {} .config-backup/{}
 
-if test -f "$HOME/.zshrc"    # Rename zshrc if it already exists
-then
-    mv $HOME/.zshrc $HOME/.zshrc.old
-fi
-
-git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME checkout    # Checkout the files
-git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME config --local status.showUntrackedFiles no    # Set git to not show untracked files
-
-# Clone oh-my-zsh plugins
-git clone https://github.com/marlonrichert/zsh-autocomplete.git $HOME/.config/oh-my-zsh/custom/plugins/zsh-autocomplete
-git clone https://github.com/zsh-users/zsh-syntax-highlighting.git $HOME/.config/oh-my-zsh/custom/plugins/zsh-syntax-highlighting
+dfg config --local status.showUntrackedFiles no    # Set git to not show untracked files
 
 clear
 echo "Done!"

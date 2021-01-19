@@ -3,9 +3,9 @@ alias dfg='git --git-dir=$HOME/.dotfiles --work-tree=$HOME'
 
 
 # ZSH
-alias rzsh='source ~/.config/zsh/zshrc'
-alias edzsh='nano ~/.config/zsh/zshrc'
-alias edalias='nano ~/.config/aliases/alias'
+alias rzsh='source ~/.config/zsh/.zshrc'
+alias edzsh='nano ~/.config/zsh/.zshrc'
+alias edalias='nano ~/.config/zsh/.alias'
 
 
 # Functional

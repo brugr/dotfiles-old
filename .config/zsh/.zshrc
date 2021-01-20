@@ -34,7 +34,7 @@ setopt HIST_FIND_NO_DUPS
 
 # Load Nord dircolors
 # https://github.com/arcticicestudio/nord-dircolors
-test -r "$ZDOTDIR/dir_colors" && eval $(dircolors $ZDOTDIR/dir_colors)
+test -r "$ZDOTDIR/dircolors" && eval $(dircolors $ZDOTDIR/dircolors)
 
 # Load Aliases
 source ~/.config/zsh/alias

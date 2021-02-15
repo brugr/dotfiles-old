@@ -28,6 +28,7 @@ fi
 
 # Install antigen
 echo "Installing Antigen..."
+mkdir -p $HOME/.config/zsh/antigen
 curl -L https://raw.githubusercontent.com/zsh-users/antigen/master/bin/antigen.zsh > $HOME/.config/zsh/antigen/antigen.zsh
 
 # Clone dotfiles
@@ -35,11 +36,15 @@ echo "Installing dotfiles..."
 git clone --bare https://github.com/brugr/dotfiles.git $HOME/.dotfiles
 
 # Checkout files
-mkdir -p .config-backup && \
+mkdir -p $HOME/.config-backup && \
 dfg checkout 2>&1 | egrep "\s+\." | awk {'print $1'} | \
 xargs -I{} mv {} .config-backup/{}
 
 dfg config --local status.showUntrackedFiles no    # Set git to not show untracked files
+
+# Remove README.md and LICENSE
+rm $HOME/README.md
+rm $HOME/LICENSE
 
 clear
 echo "Done!"

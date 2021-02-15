@@ -31,7 +31,7 @@ Or you can to it the manual way below.
 
 ### Part 1
 
-#### Install [Antigen](https://github.com/ohmyzsh/ohmyzsh)
+#### Install [Antigen](https://github.com/zsh-users/antigen)
 
 Install Antigen with this command.
 

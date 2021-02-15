@@ -1,6 +1,6 @@
 # .dotfiles
 
-This is a bare git repo with my dotfiles for use on multiple distros with ZSH.
+This is a bare git repo with my dotfiles for use on multiple distros with ZSH. Can also be used on macOS with [linuxify](https://github.com/fabiomaia/linuxify).
 
 ## How to install
 

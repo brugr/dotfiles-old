@@ -1,7 +1,3 @@
-# Dotfile git
-alias dfg='git --git-dir=$HOME/.dotfiles --work-tree=$HOME'
-
-
 # ZSH
 alias rzsh='source ~/.config/zsh/.zshrc'
 alias edzsh='nano ~/.config/zsh/.zshrc'
@@ -60,3 +56,15 @@ alias ....='cd ../../../'
 alias .....='cd ../../../../'
 alias .4='cd ../../../../'
 alias .5='cd ../../../../../'
+
+
+# Arch pacman
+## Install pacmatic, yay and powerpill
+## https://unix.stackexchange.com/questions/384101/have-pacmatic-wrap-yay-wrap-powerpill-wrap-pacman/384102#384102
+alias pac=yay  # For convenience
+
+# pacmatic needs to be run as root: https://github.com/keenerd/pacmatic/issues/35
+alias pacmatic='sudo --preserve-env=pacman_program /usr/bin/pacmatic'
+
+# Downgrade permissions as AUR helpers expect to be run as a non-root user. $UID is read-only in {ba,z}sh.
+alias yay='pacman_program="sudo -u #$UID /usr/bin/yay" pacmatic'

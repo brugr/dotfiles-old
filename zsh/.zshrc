@@ -1,10 +1,10 @@
 # Set env variables
 export XDG_CONFIG_HOME="$HOME/.config"
-export ZDOTDIR="$XDG_CONFIG_HOME/zsh"
-export ADOTDIR="$ZDOTDIR/antigen"
+export ZDOTDIR="$HOME/.config/zsh"
+export ADOTDIR="$HOME/.config/zsh-antigen"
 
 # Load Antigen
-source $ADOTDIR/antigen.zsh
+source $ZDOTDIR/antigen.zsh
 
 # Set Theme
 antigen theme essembeh
@@ -27,9 +27,7 @@ HISTSIZE=5000
 
 setopt INC_APPEND_HISTORY
 export HISTTIMEFORMAT="[%F %T] "
-
 setopt EXTENDED_HISTORY
-
 setopt HIST_FIND_NO_DUPS
 
 # Load Nord dircolors

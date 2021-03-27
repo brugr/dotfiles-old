@@ -7,13 +7,10 @@ export ADOTDIR="$HOME/.config/zsh-antigen"
 source $ZDOTDIR/antigen.zsh
 
 # Set Theme
-antigen theme essembeh
-
-# Load oh-my-zsh
-antigen use oh-my-zsh
+antigen theme romkatv/powerlevel10k
 
 # Plugins
-antigen bundle sudo
+antigen bundle $HOME/.config/zsh/plugins
 antigen bundle zdharma/fast-syntax-highlighting
 antigen bundle zsh-users/zsh-autosuggestions
 
@@ -36,3 +33,6 @@ test -r "$ZDOTDIR/dircolors" && eval $(dircolors $ZDOTDIR/dircolors)
 
 # Load Aliases
 source ~/.config/zsh/alias
+
+# Powerline10k
+source ~/.config/zsh/.p10k.zsh

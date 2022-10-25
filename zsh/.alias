@@ -2,15 +2,16 @@
 ### Change directory & list files 
 cl() {
    cd $1
-   ls -lA
+   ls -lA --color=auto --human-readable --group-directories-first
 }
 ### Make directory & enter it
 mkcd() {
-   mkdir -p $1
+   mkdir -pv $1
    cd $1
 }
+
 ### Whats my IP
-alias pubip='curl ipinfo.io/ip'
+alias pubip='curl ifconfig.co/'
 
 
 # Basics
@@ -51,3 +52,9 @@ alias ....='cd ../../../'
 alias .....='cd ../../../../'
 alias .4='cd ../../../../'
 alias .5='cd ../../../../../'
+alias cdh="cd $HOME"
+
+# Distrobox
+alias db="distrobox "
+alias dbe="distrobox-enter "
+alias dbs="distrobox-stop "

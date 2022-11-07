@@ -12,24 +12,25 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
-
 # Load Znap
 # Download Znap if not found
-[[ -f ~/.config/zsh-snap/znap.zsh ]] ||
+[[ -f ~/.config/zsh/plugins/zsh-snap/znap.zsh ]] ||
     git clone --depth 1 -- \
-        https://github.com/marlonrichert/zsh-snap.git ~/.config/zsh-snap
+        https://github.com/marlonrichert/zsh-snap.git ~/.config/zsh/plugins/zsh-snap
 
-source $HOME/.config/zsh-snap/znap.zsh  # Start Znap
+source $HOME/.config/zsh/plugins/zsh-snap/znap.zsh  # Start Znap
 
 # P10K
 znap source romkatv/powerlevel10k
 
 # Plugins
-znap source ohmyzsh/ohmyzsh plugins/{git,sudo}
+znap source ohmyzsh/ohmyzsh plugins/{git,sudo,dnf,aliases,alias-finder}
 znap source zsh-users/zsh-autosuggestions
 znap source zsh-users/zsh-syntax-highlighting
 znap source zdharma/fast-syntax-highlighting
 znap source marlonrichert/zsh-autocomplete
+
+zstyle ':autocomplete:async' enabled no  
 
 # History
 HISTFILE="$HOME/.history"

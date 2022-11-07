@@ -58,3 +58,9 @@ alias cdh="cd $HOME"
 alias db="distrobox "
 alias dbe="distrobox-enter "
 alias dbs="distrobox-stop "
+
+# Flatpak
+alias fp="flatpak "
+alias fpu="flatpak update"
+alias fpi="flatpak --user install "
+alias fpr="flatpak remove "

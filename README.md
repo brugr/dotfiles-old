@@ -17,3 +17,7 @@ and to uninstall run
 ### zsh
 
 Uses [powerlevel10k](https://github.com/romkatv/powerlevel10k) for the theme, and has [fast-syntax-highlighting](https://github.com/zdharma/fast-syntax-highlighting), [zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions) as plugins. You will need a custom font from [Nerd Fonts](https://github.com/ryanoasis/nerd-fonts).
+
+### topgrade
+
+Config for [topgrade](https://github.com/topgrade-rs/topgrade)

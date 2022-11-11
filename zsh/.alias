@@ -64,3 +64,8 @@ alias fp="flatpak "
 alias fpu="flatpak update"
 alias fpi="flatpak --user install "
 alias fpr="flatpak remove "
+
+# Docker
+alias dcu="docker compose up -d"
+alias dcd="docker compose down"
+alias d="docker "

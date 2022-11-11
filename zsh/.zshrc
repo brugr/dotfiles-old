@@ -1,10 +1,3 @@
-# Download P10K if not found
-#[[ -f ~/.config/p10k/powerlevel10k.zsh-theme ]] ||
-#    git clone --depth 1 -- \
-#        https://github.com/romkatv/powerlevel10k.git ~/.config/p10k
-#
-#source ~/.config/p10k/powerlevel10k.zsh-theme  # Load P10K
-
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
@@ -20,22 +13,32 @@ fi
 
 source $HOME/.config/zsh/plugins/zsh-snap/znap.zsh  # Start Znap
 
-# P10K
+# Theme
 znap source romkatv/powerlevel10k
 
+# Powerline10k config
+source $HOME/.p10k.zsh
+
+
+autoload -U compinit && compinit -u
+zstyle ':completion:*' menu select
+# Auto complete with case insenstivity
+zstyle ':completion:*' matcher-list '' 'm:{a-zA-Z}={A-Za-z}' 'r:|[._-]=* r:|=*' 'l:|=* r:|=*'
+
 # Plugins
-znap source ohmyzsh/ohmyzsh plugins/{git,sudo,dnf,aliases,alias-finder}
+znap source ohmyzsh/ohmyzsh plugins/{git,sudo,dnf,alias-finder,autojump,bgnotify,gnu-utils}
 znap source zsh-users/zsh-autosuggestions
 znap source zsh-users/zsh-syntax-highlighting
 znap source zdharma/fast-syntax-highlighting
 znap source marlonrichert/zsh-autocomplete
 
 zstyle ':autocomplete:async' enabled no  
+bgnotify_threshold=20
 
 # History
-HISTFILE="$HOME/.history"
-SAVEHIST=5000
-HISTSIZE=5000
+HISTFILE="$HOME/.cache/zsh/history"
+SAVEHIST=1000
+HISTSIZE=1000
 
 setopt INC_APPEND_HISTORY
 export HISTTIMEFORMAT="[%F %T] "
@@ -44,6 +47,3 @@ setopt HIST_FIND_NO_DUPS
 
 # Load Aliases
 source $HOME/.alias
-
-# Powerline10k
-source $HOME/.p10k.zsh

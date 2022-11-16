@@ -7,11 +7,11 @@ fi
 
 # Load Znap
 # Download Znap if not found
-[[ -f ~/.config/zsh/plugins/zsh-snap/znap.zsh ]] ||
+[[ -f ~/.cache/zsh-snap/zsh-snap/znap.zsh ]] ||
     git clone --depth 1 -- \
-        https://github.com/marlonrichert/zsh-snap.git ~/.config/zsh/plugins/zsh-snap
+        https://github.com/marlonrichert/zsh-snap.git ~/.cache/zsh-snap/zsh-snap
 
-source $HOME/.config/zsh/plugins/zsh-snap/znap.zsh  # Start Znap
+source $HOME/.cache/zsh-snap/zsh-snap/znap.zsh  # Start Znap
 
 # Theme
 znap source romkatv/powerlevel10k
@@ -20,8 +20,6 @@ znap source romkatv/powerlevel10k
 source $HOME/.p10k.zsh
 
 
-autoload -U compinit && compinit -u
-zstyle ':completion:*' menu select
 # Auto complete with case insenstivity
 zstyle ':completion:*' matcher-list '' 'm:{a-zA-Z}={A-Za-z}' 'r:|[._-]=* r:|=*' 'l:|=* r:|=*'
 
@@ -32,7 +30,6 @@ znap source zsh-users/zsh-syntax-highlighting
 znap source zdharma/fast-syntax-highlighting
 znap source marlonrichert/zsh-autocomplete
 
-zstyle ':autocomplete:async' enabled no  
 bgnotify_threshold=20
 
 # History

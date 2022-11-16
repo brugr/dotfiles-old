@@ -28,6 +28,7 @@ alias clr='clear'
 alias cls='clear'
 alias s='sudo '
 alias sudo='sudo '
+alias se='sudoedit '
 alias g='git'
 alias sdn='sudo shutdown -h now'
 
@@ -53,6 +54,10 @@ alias .....='cd ../../../../'
 alias .4='cd ../../../../'
 alias .5='cd ../../../../../'
 alias cdh="cd $HOME"
+
+# rm-trash
+alias rt="rmtrash "
+alias rdt="rmdirtrash "
 
 # Distrobox
 alias db="distrobox "

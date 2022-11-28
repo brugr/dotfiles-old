@@ -74,3 +74,12 @@ alias fpr="flatpak remove "
 alias dcu="docker compose up -d"
 alias dcd="docker compose down"
 alias d="docker "
+
+# transactional-update
+alias tu="sudo transactional-update "
+alias tui="sudo transactional-update --continue pkg install "
+alias tur="sudo transactional-update --continue pkg remove "
+alias tuu="sudo transactional-update --continue dup"
+alias tus="sudo transactional-update --continue shell"
+alias tuc="sudo transactional-update cleanup"
+alias tur="sudo transactional-update rollback "

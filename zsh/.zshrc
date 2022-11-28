@@ -24,11 +24,10 @@ source $HOME/.p10k.zsh
 zstyle ':completion:*' matcher-list '' 'm:{a-zA-Z}={A-Za-z}' 'r:|[._-]=* r:|=*' 'l:|=* r:|=*'
 
 # Plugins
-znap source ohmyzsh/ohmyzsh plugins/{git,sudo,dnf,alias-finder,autojump,bgnotify,gnu-utils}
+znap source ohmyzsh/ohmyzsh plugins/{git,sudo,dnf,alias-finder,autojump,gnu-utils}
 znap source zsh-users/zsh-autosuggestions
-znap source zsh-users/zsh-syntax-highlighting
 znap source zdharma/fast-syntax-highlighting
-znap source marlonrichert/zsh-autocomplete
+#znap source marlonrichert/zsh-autocomplete
 
 bgnotify_threshold=20
 

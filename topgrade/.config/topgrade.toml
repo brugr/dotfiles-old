@@ -2,7 +2,7 @@
 assume_yes = true
 
 # Disable specific steps - same options as the command line flag
-#disable = ["system", "emacs"]
+disable = ["system"]
 
 # Ignore failures for these steps
 #ignore_failures = ["powershell"]
@@ -44,7 +44,7 @@ cleanup = true
 max_concurrency = 5
 # Additional git repositories to pull
 repos = [
-    "~/.config/zsh/plugins/*"
+    "~/.cache/zsh-snap/*"
 ]
 
 # Don't pull the predefined git repos

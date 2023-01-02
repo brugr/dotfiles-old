@@ -38,7 +38,7 @@
     status                  # exit code of the last command
     # =========================[ Line #2 ]=========================
     newline                 # \n
-    # os_icon               # os identifier
+    os_icon                 # os identifier
     context                 # user@hostname
     toolbox                 # toolbox name (https://github.com/containers/toolbox)
     virtualenv              # python virtual environment (https://docs.python.org/3/library/venv.html)

@@ -19,7 +19,6 @@ znap source romkatv/powerlevel10k
 # Powerline10k config
 source $HOME/.p10k.zsh
 
-
 # Auto complete with case insenstivity
 zstyle ':completion:*' matcher-list '' 'm:{a-zA-Z}={A-Za-z}' 'r:|[._-]=* r:|=*' 'l:|=* r:|=*'
 
@@ -27,7 +26,7 @@ zstyle ':completion:*' matcher-list '' 'm:{a-zA-Z}={A-Za-z}' 'r:|[._-]=* r:|=*' 
 znap source ohmyzsh/ohmyzsh plugins/{git,sudo,dnf,alias-finder,autojump,gnu-utils}
 znap source zsh-users/zsh-autosuggestions
 znap source zdharma/fast-syntax-highlighting
-#znap source marlonrichert/zsh-autocomplete
+znap source marlonrichert/zsh-autocomplete
 
 bgnotify_threshold=20
 
@@ -40,6 +39,9 @@ setopt INC_APPEND_HISTORY
 export HISTTIMEFORMAT="[%F %T] "
 setopt EXTENDED_HISTORY
 setopt HIST_FIND_NO_DUPS
+bindkey  "^[[H"   beginning-of-line
+bindkey  "^[[F"   end-of-line
+bindkey  "^[[3~"  delete-char
 
 # Load Aliases
 source $HOME/.alias

@@ -83,3 +83,9 @@ alias tuu="sudo transactional-update --continue dup"
 alias tus="sudo transactional-update --continue shell"
 alias tuc="sudo transactional-update cleanup"
 alias tur="sudo transactional-update rollback "
+
+# kitty ssh
+alias ssh="kitty +kitten ssh"
+
+# host shell
+alias hs="host-spawn zsh"

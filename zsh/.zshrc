@@ -23,12 +23,9 @@ source $HOME/.p10k.zsh
 zstyle ':completion:*' matcher-list '' 'm:{a-zA-Z}={A-Za-z}' 'r:|[._-]=* r:|=*' 'l:|=* r:|=*'
 
 # Plugins
-znap source ohmyzsh/ohmyzsh plugins/{git,sudo,dnf,alias-finder,autojump,gnu-utils}
+znap source ohmyzsh/ohmyzsh plugins/{cp,docker,docker-compose,git,gh,history,sudo,dnf,alias-finder,autojump,gnu-utils}
 znap source zsh-users/zsh-autosuggestions
 znap source zdharma/fast-syntax-highlighting
-znap source marlonrichert/zsh-autocomplete
-
-bgnotify_threshold=20
 
 # History
 HISTFILE="$HOME/.cache/zsh/history"
@@ -39,6 +36,8 @@ setopt INC_APPEND_HISTORY
 export HISTTIMEFORMAT="[%F %T] "
 setopt EXTENDED_HISTORY
 setopt HIST_FIND_NO_DUPS
+
+# Bind home, end and del to normal behaviour
 bindkey  "^[[H"   beginning-of-line
 bindkey  "^[[F"   end-of-line
 bindkey  "^[[3~"  delete-char
